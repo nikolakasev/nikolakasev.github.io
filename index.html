@@ -1,1 +1,265 @@
-AlgoHusky's Company Website
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      AlgoHusky - Stop Verspilling van Tijd. Start met Slimme AI Agents.
+    </title>
+    <meta
+      name="description"
+      content="Wij bouwen AI agents die jouw repetitieve taken overnemen - zodat jij je kunt focussen op wat echt belangrijk is. MVP in Tripple Three."
+    />
+    <meta
+      name="keywords"
+      content="AI agents, automatisering, Nederland, MVP, Tripple Three, leadgeneratie, Dutch AI"
+    />
+    <!-- Tailwind CSS CDN for development -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              blue: {
+                primary: "#0057B7",
+                secondary: "#4A90E2",
+              },
+              orange: {
+                primary: "#FF9500",
+                secondary: "#FFB74D",
+              },
+              neutral: {
+                white: "#FAEBD7",
+                dark: "#333333",
+              },
+            },
+            fontFamily: {
+              serif: ["Merriweather", "serif"],
+              sans: ["Lato", "sans-serif"],
+            },
+            fontSize: {
+              body: ["16px", "24px"],
+              "body-lg": ["18px", "28px"],
+              heading: ["22px", "32px"],
+            },
+            height: {
+              header: "15vh",
+              hero: "auto",
+              footer: "auto",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Custom CSS -->
+    <style>
+      .underline-blue {
+        text-decoration: underline;
+        text-decoration-color: #0057b7;
+        text-decoration-thickness: 6px;
+        text-underline-offset: 4px;
+      }
+      .underline-orange {
+        position: relative;
+        display: inline-block;
+      }
+      .underline-orange::after {
+        content: "";
+        position: absolute;
+        left: -4px;
+        right: 0px;
+        bottom: -2px;
+        height: 4px;
+        background: radial-gradient(
+            ellipse at 20% 50%,
+            #ff9500 20%,
+            transparent 25%
+          ),
+          radial-gradient(
+            ellipse at 60% 30%,
+            rgba(255, 149, 0, 0.8) 15%,
+            transparent 20%
+          ),
+          radial-gradient(
+            ellipse at 80% 70%,
+            rgba(255, 149, 0, 0.6) 10%,
+            transparent 15%
+          ),
+          linear-gradient(
+            to right,
+            #ff9500 0%,
+            #ff9500 25%,
+            rgba(255, 149, 0, 0.9) 50%,
+            rgba(255, 149, 0, 0.7) 75%,
+            rgba(255, 149, 0, 0.5) 100%
+          );
+        border-radius: 8px 30px 40px 4px;
+        transform: rotate(-1.2deg) scaleX(1.08) skewX(-2.5deg);
+        box-shadow: -3px 0px 3px rgba(255, 149, 0, 0.9),
+          -2px 1px 2px rgba(255, 149, 0, 0.8),
+          -1px 2px 1px rgba(255, 149, 0, 0.7),
+          1px 0px 4px rgba(255, 149, 0, 0.6), 0px 2px 1px rgba(255, 149, 0, 0.5),
+          0px -2px 1px rgba(255, 149, 0, 0.8),
+          2px 1px 2px rgba(255, 149, 0, 0.4);
+        filter: blur(0.3px);
+      }
+      body {
+        height: 100vh;
+        overflow-y: auto;
+      }
+      .logo-dark {
+        filter: grayscale(100%) brightness(0.3) contrast(1.2);
+      }
+      .logo-normal {
+        filter: grayscale(100%);
+      }
+      /* Force cache refresh */
+    </style>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ElevenLabs Convai Widget Script -->
+    <script
+      src="https://unpkg.com/@elevenlabs/convai-widget-embed"
+      async
+      type="text/javascript"
+    ></script>
+  </head>
+  <body
+    class="bg-neutral-white text-neutral-dark font-sans min-h-screen flex flex-col"
+  >
+    <!-- Header -->
+    <header
+      class="h-header bg-neutral-white text-neutral-dark flex items-center justify-start md:justify-center px-4 flex-shrink-0"
+    >
+      <div
+        class="flex items-center space-x-3 md:space-x-4 md:ml-[-50%] lg:ml-[-45%]"
+      >
+        <!-- AlgoHusky Logo -->
+        <img
+          src="algohusky-logo.svg"
+          alt="AlgoHusky Logo"
+          class="h-12 w-12 md:h-16 md:w-16"
+        />
+        <h1 class="text-2xl md:text-4xl font-serif font-bold">AlgoHusky</h1>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main
+      class="flex-1 bg-neutral-white flex justify-center px-4 md:px-8 pt-1 md:pt-2 pb-8 md:pb-4"
+    >
+      <div class="max-w-6xl mx-auto text-center text-neutral-dark">
+        <!-- Main Value Proposition -->
+        <h2
+          class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 md:mb-6 leading-normal md:leading-snug lg:leading-normal"
+        >
+          Stop verspilling van tijd. <br />
+          <span class="underline-blue">Start met slimme AI agents.</span>
+        </h2>
+
+        <!-- Supporting Text -->
+        <div
+          class="text-lg md:text-body-lg lg:text-xl mb-8 md:mb-8 max-w-4xl mx-auto leading-relaxed"
+        >
+          <p class="mb-4 md:mb-4">
+            Wij bouwen AI agents die jouw repetitieve taken overnemen - zodat
+            jij je kunt focussen op wat echt belangrijk is.
+          </p>
+          <p class="mb-6 md:mb-6">
+            Van uren zoeken naar
+            <span class="underline-orange">resultaten in minuten</span>. Van
+            handmatige leadgeneratie naar
+            <span class="underline-orange">geautomatiseerde prospects</span>.
+            Van urenlange offertes maken naar
+            <span class="underline-orange">directe quotes</span>.
+          </p>
+        </div>
+
+        <!-- CTA and Methodology -->
+        <div class="mb-8 md:mb-8">
+          <!-- ElevenLabs Convai Widget -->
+          <div class="mb-6 md:mb-6">
+            <!-- <elevenlabs-convai
+              agent-id="agent_0801k10zqw99f2b8yvrdz4z646b2"
+            ></elevenlabs-convai> -->
+          </div>
+          <div class="text-sm md:text-sm lg:text-base max-w-3xl mx-auto">
+            <p class="font-semibold mb-2">Onze aanpak:</p>
+            <p>
+              Een uur gratis consulting sessie → 3 uur haalbaarheidscheck → 3
+              dagen voor een werkende basisversie → 3 iteraties van één week
+              naar een volledig operationeel proces, geïntegreerd in jouw
+              bedrijf.
+            </p>
+          </div>
+        </div>
+
+        <!-- Social Proof -->
+        <div class="mt-6 md:mt-8">
+          <p class="text-sm md:text-sm mb-4 md:mb-4 opacity-75">
+            Vertrouwd door:
+          </p>
+          <div
+            class="flex flex-wrap justify-center items-center gap-4 md:gap-8 opacity-60"
+          >
+            <img
+              src="ing-logo.png"
+              alt="ING"
+              class="h-12 md:h-14 logo-normal"
+            />
+            <img src="kpn-logo.svg" alt="KPN" class="h-10 md:h-12 logo-dark" />
+            <img
+              src="Rabobank-text-logo.avif"
+              alt="Rabobank"
+              class="h-6 md:h-7 logo-normal"
+            />
+            <img
+              src="estivant-logo.png"
+              alt="Estivant"
+              class="h-8 md:h-9 logo-dark"
+            />
+            <img
+              src="Perfetti_Van_Melle_logo.png"
+              alt="Perfetti van Melle"
+              class="h-8 md:h-9 logo-normal"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-dark text-white py-6 md:py-4 px-4 flex-shrink-0">
+      <div class="max-w-6xl mx-auto">
+        <!-- Main Footer Content -->
+        <div class="text-center mb-4 md:mb-2">
+          <p class="text-sm md:text-sm">
+            &copy; 2025 AlgoHusky • KvK: 86983644 • Btw: NL004335341.B.60 • Alle
+            rechten voorbehouden.
+          </p>
+        </div>
+
+        <!-- Footer Links - Stack on mobile, inline on desktop -->
+        <div
+          class="flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0 md:space-x-4 text-xs opacity-75"
+        >
+          <a
+            href="NLdigital-Voorwaarden-NL.pdf"
+            class="hover:underline"
+            target="_blank"
+            >Algemene voorwaarden</a
+          >
+          <span class="hidden md:inline">•</span>
+          <span class="text-center md:text-left">
+            Proudly made in Haarlem, vibe coded with VS Code and Claude.
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
