@@ -1,0 +1,22 @@
+{
+    "name": "algohusky-website",
+    "version": "1.0.0",
+    "description": "AlgoHusky's Company Website",
+    "main": "index.html",
+    "scripts": {
+        "build-css": "tailwindcss -i ./src/input.css -o ./style.css --watch",
+        "build-css-prod": "tailwindcss -i ./src/input.css -o ./style.css --minify",
+        "dev": "npm run build-css",
+        "build": "npm run build-css-prod"
+    },
+    "devDependencies": {
+        "tailwindcss": "^3.4.0"
+    },
+    "keywords": [
+        "tailwindcss",
+        "website",
+        "algohusky"
+    ],
+    "author": "AlgoHusky",
+    "license": "MIT"
+}

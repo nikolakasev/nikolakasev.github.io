@@ -32,45 +32,13 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="nl_NL" />
     <meta name="msvalidate.01" content="1F583BCD39E98633C8217BE48D465E79" />
-    <!-- Tailwind CSS CDN for development -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Custom Tailwind Config -->
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              blue: {
-                primary: "#0057B7",
-                secondary: "#4A90E2",
-              },
-              orange: {
-                primary: "#FF9500",
-                secondary: "#FFB74D",
-              },
-              neutral: {
-                white: "#FAEBD7",
-                dark: "#333333",
-              },
-            },
-            fontFamily: {
-              serif: ["Merriweather", "serif"],
-              sans: ["Lato", "sans-serif"],
-            },
-            fontSize: {
-              body: ["16px", "24px"],
-              "body-lg": ["18px", "28px"],
-              heading: ["22px", "32px"],
-            },
-            height: {
-              header: "15vh",
-              hero: "auto",
-              footer: "auto",
-            },
-          },
-        },
-      };
-    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
     <!-- Custom CSS -->
     <style>
       .underline-blue {
@@ -135,11 +103,6 @@
       }
       /* Force cache refresh */
     </style>
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Lato:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
     <!-- ElevenLabs Convai Widget Script -->
     <script
       src="https://unpkg.com/@elevenlabs/convai-widget-embed"
@@ -253,7 +216,7 @@
         <div
           class="flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0 md:space-x-4 text-xs opacity-75"
         >
-          <span>&copy; 2025 AlgoHusky</span>
+          <span>&copy; 2026 AlgoHusky</span>
           <span class="hidden md:inline">•</span>
           <a
             href="NLdigital-Voorwaarden-NL.pdf"
